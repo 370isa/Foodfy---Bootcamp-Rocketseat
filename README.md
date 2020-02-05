@@ -8,7 +8,7 @@ Neste projeto foi necessário fazer um tipo de catálogo de um restaurante chama
 As images das páginas se encontram na pasta `assets`.
 
 ### Mockup
-<img src="https://github.com/370isa/Foodfy---Bootcamp-Rocketseat/specs/mockup.png" />
+<img src="https://github.com/370isa/Foodfy---Bootcamp-Rocketseat/blob/master/specs/mockup.png" />
 
 ## Resumo da 1ª Etapa do desafio
 Na primeira etapa, o Desafio pede apenas para trabalharmos o Front-end nele, explorando toos os tipos de recuroso possíveis, deixando assim um código semantico e mais limpo possível.
