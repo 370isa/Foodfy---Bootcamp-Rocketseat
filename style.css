@@ -1,0 +1,216 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap';
+
+:root {
+  --fontFace-roboto: 'Roboto', sans-serif;
+  --fontColor-black: #111;
+  --fontColor-gray: #777;
+}
+
+* {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fontFace-roboto);
+}
+
+section {
+  margin: 50px 0;
+}
+
+h1, h2, h3 {
+  color: var(--fontColor-black);
+  font-weight: bold;
+}
+
+h2, h3 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+/* === HEADER === */
+header {
+  margin-top: 36.1px;
+}
+
+header div {
+  align-items: center;
+  display: flex;
+}
+
+header img {
+  height: 26.9px;
+  margin-right: 122.4px;
+  width: 90.6px;
+}
+
+header a {
+  color: var(--fontColor-black);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+header a.active {
+  font-weight: bold;
+}
+
+header a:last-child {
+  margin-left: 30px;
+}
+
+/* === BANNER TOP === */
+.banner-top {
+  align-items: center;
+  background: #FBDFDB;
+  border-radius: 30px;
+  display: flex;
+  height: 366px;
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-top div {
+  margin: 0 124px 0 60px;
+}
+
+.banner-top div p {
+  color: black;
+  opacity: 70%;
+  width: 316px;
+}
+
+.banner-top img {
+  bottom: 0;
+  position: absolute;
+  right: 100px;
+}
+
+/* === CONTENT PAGE === */
+.content-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 20px;
+}
+
+.content-page .card {
+  cursor: pointer;
+}
+
+.content-page img {
+  border-radius: 15px;
+  height: 140px;
+  width: 300px;
+}
+
+.content-page h4 {
+  color: var(--fontColor-black);
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.content-page span {
+  color: var(--fontColor-gray);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* === ABOUT PAGE === */
+section.about-page p {
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* === Footer === */
+footer {
+  align-items: center;
+  background-color: #EEE;
+  color: #999;
+  display: flex;
+  font-size: 14px;
+  height: 62px;
+  justify-content: center;
+  line-height: 16px;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+/* === MODAL === */
+.modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, .6);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-overlay .modal-content {
+  background: white;
+  border-radius: 16px;
+  height: 413px;
+  margin: 0 auto;
+  text-align: center;
+  width: 660px;
+}
+
+.modal-overlay .modal-content img {
+  border-radius: 15px;
+  height: 200px;
+  margin: 30px auto 20px;
+  width: 600px;
+}
+
+.modal-overlay .modal-content h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.modal-overlay .modal-content p {
+  color: var(--fontColor-gray);
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 60px;
+}
+
+.modal-overlay .close-modal {
+  color: #999;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+/* === MODAL.ACTIVE === */
+.modal-overlay.active {
+  display: flex;
+}
