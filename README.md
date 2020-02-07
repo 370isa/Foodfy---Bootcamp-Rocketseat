@@ -12,3 +12,6 @@ As images das páginas se encontram na pasta `assets`.
 
 ## Resumo da 1ª Etapa do desafio
 Na primeira etapa, o Desafio pede apenas para trabalharmos o Front-end nele, explorando toos os tipos de recuroso possíveis, deixando assim um código semantico e mais limpo possível.
+
+## Resultado da 1ª Etapa do desafio
+<video src="video/result-desafio1.mp4" style="width: 940px; height: auto;"></video>
