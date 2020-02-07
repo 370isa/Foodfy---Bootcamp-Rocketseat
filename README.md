@@ -14,4 +14,6 @@ As images das páginas se encontram na pasta `assets`.
 Na primeira etapa, o Desafio pede apenas para trabalharmos o Front-end nele, explorando toos os tipos de recuroso possíveis, deixando assim um código semantico e mais limpo possível.
 
 ## Resultado da 1ª Etapa do desafio
-<video src="video/result-desafio1.mp4" style="width: 940px; height: auto;"></video>
+Para ver o resultado, basta assitir ao vídeo que está no link a seguir:
+https://github.com/370isa/Foodfy---Bootcamp-Rocketseat/blob/master/specs/result-desafio1.mp4.
+<video src="https://github.com/370isa/Foodfy---Bootcamp-Rocketseat/blob/master/specs/result-desafio1.mp4" style="width: 940px; height: auto;"></video>
