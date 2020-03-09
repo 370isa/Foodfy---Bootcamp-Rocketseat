@@ -1,0 +1,39 @@
+<div class="content-page recipes" id="{{ recipe.id }}">
+  <div class="image-recipes">
+    <img src="{{ recipe.image }}" alt="Triplo bacon burger">
+  </div>
+  <div class="title-recipes">
+    <h1>{{ recipe.title }}</h1>
+    <h3>por {{ recipe.author }}</h3>
+  </div>
+
+  <div class="ingredient {{ recipe.id }}">
+    <h2>Ingredientes</h2>
+    <a class="event-open-block-ingredient">Fechar</a>
+    <ul class="list-details ingredient active">
+      {% for item in recipe.ingredients %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="preparation {{ recipe.id }}">
+    <h2>Modo de preparo</h2>
+    <a class="event-open-block-preparation">Fechar</a>
+    <ol class="list-details preparation active">
+      {% for item in recipe.preparation %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  {% if recipe.information %}
+    <div class="informations {{ recipe.id }}">
+      <h2>Informações adicionais</h2>
+      <a class="event-open-block-informations">Fechar</a>
+      <p class="list-details informations active">
+        {{ recipe.information }}
+      </p>
+    </div>
+  {% endif %}
+</div>

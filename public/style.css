@@ -1,0 +1,289 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap';
+
+:root {
+  --fontFace-roboto: 'Roboto', sans-serif;
+  --fontColor-black: #111;
+  --fontColor-gray4: #444;
+  --fontColor-gray7: #777;
+  --fontColor-gray9: #999;
+  --fontColor-grayE: #EEE;
+}
+
+* {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fontFace-roboto);
+}
+
+section {
+  margin: 50px 0;
+}
+
+section hr {
+  border-top: 1px dashed var(--fontColor-gray9);
+  height: 1px;
+  margin: 50px 0;
+  width: 100%;
+}
+
+section hr:last-child {
+  display: none;
+}
+
+h1, h2, h3 {
+  color: var(--fontColor-black);
+  font-weight: bold;
+}
+
+h2, h3 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+/* === HEADER === */
+header {
+  margin-top: 36.1px;
+}
+
+header div {
+  align-items: center;
+  display: flex;
+}
+
+header img {
+  height: 26.9px;
+  margin-right: 122.4px;
+  width: 90.6px;
+}
+
+header a {
+  color: var(--fontColor-black);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+header a.active {
+  font-weight: bold;
+}
+
+header a:last-child {
+  margin-left: 30px;
+}
+
+/* === BANNER TOP === */
+.banner-top {
+  align-items: center;
+  background: #FBDFDB;
+  border-radius: 30px;
+  display: flex;
+  height: 366px;
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-top div {
+  margin: 0 124px 0 60px;
+}
+
+.banner-top div p {
+  color: black;
+  opacity: 70%;
+  width: 316px;
+}
+
+.banner-top img {
+  bottom: 0;
+  position: absolute;
+  right: 100px;
+}
+
+/* === CONTENT BLOCK === */
+.content-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px 20px;
+}
+
+.content-block .card {
+  cursor: pointer;
+}
+
+.content-block img {
+  border-radius: 15px;
+  height: 140px;
+  width: 300px;
+}
+
+.content-block h4 {
+  color: var(--fontColor-black);
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.content-block span {
+  color: var(--fontColor-gray7);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/* === CONTENT PAGE === */
+.content-page .image-recipes {
+  border-radius: 15px;
+  height: 280px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.content-page .image-recipes img {
+  height: auto;
+  width: 100%;
+}
+
+.title-recipes {
+  text-align: center;
+}
+
+.title-recipes h1 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 4px;
+}
+
+.title-recipes h3 {
+  color: var(--fontColor-gray7);
+  margin-bottom: 23px;
+}
+
+.content-page h2 {
+  display: inline-block;
+  margin: 27px 8px 20px 0;
+}
+
+.content-page h2 ~ a {
+  color: var(--fontColor-gray9);
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.content-page .list-details {
+  color: var(--fontColor-gray4);
+  display: none;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  padding-left: 18px;
+}
+
+.content-page .list-details.informations {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.content-page .list-details.active {
+  display: block;
+}
+
+/* === ABOUT PAGE === */
+.about-page p {
+  color: var(--fontColor-gray4);
+  margin-bottom: 30px;
+}
+
+/* === Footer === */
+footer {
+  align-items: center;
+  background-color: var(--fontColor-grayE);
+  color: var(--fontColor-gray9);
+  display: flex;
+  font-size: 14px;
+  height: 62px;
+  justify-content: center;
+  line-height: 16px;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+/* === MODAL === */
+.modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, .6);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal-overlay .modal-content {
+  background: white;
+  border-radius: 16px;
+  height: 413px;
+  margin: 0 auto;
+  text-align: center;
+  width: 660px;
+}
+
+.modal-overlay .modal-content img {
+  border-radius: 15px;
+  height: 200px;
+  margin: 30px auto 20px;
+  width: 600px;
+}
+
+.modal-overlay .modal-content h2 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.modal-overlay .modal-content p {
+  color: var(--fontColor-gray7);
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 60px;
+}
+
+.modal-overlay .close-modal {
+  color: var(--fontColor-gray9);
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+/* === MODAL.ACTIVE === */
+.modal-overlay.active {
+  display: flex;
+}
