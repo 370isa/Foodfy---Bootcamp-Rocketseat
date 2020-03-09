@@ -1,0 +1,12 @@
+{% extends 'layout.njk' %}
+
+{% block head_content %}
+  <title>FOODFY - Receitas</title>
+{% endblock %}
+
+{% block content %}
+  {% for recipe in recipes %}
+    {% include 'recipe-block.njk' %}
+    <hr>
+  {% endfor %}
+{% endblock %}
