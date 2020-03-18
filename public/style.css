@@ -7,6 +7,7 @@
   --fontColor-gray7: #777;
   --fontColor-gray9: #999;
   --fontColor-grayE: #EEE;
+  --color-link: #6558C3;
 }
 
 * {
@@ -67,6 +68,7 @@ p {
 .container {
   margin: 0 auto;
   max-width: 940px;
+  position: relative;
 }
 
 /* === HEADER === */
@@ -136,6 +138,15 @@ header a:last-child {
 
 .content-block .card {
   cursor: pointer;
+}
+
+.content-block .card a {
+  display: block;
+  text-decoration: none;
+}
+
+.content-block .card a:hover {
+  opacity: .9;
 }
 
 .content-block img {
@@ -286,4 +297,141 @@ footer {
 /* === MODAL.ACTIVE === */
 .modal-overlay.active {
   display: flex;
+}
+
+/* === ADMIN === */
+.adminArea header {
+  background-color: black;
+  height: 80px;
+  margin: 0 0 50px;
+}
+
+.adminArea header .container {
+  height: 100%;
+}
+
+.adminArea header a {
+  margin-left: 0;
+}
+
+.adminArea header a img {
+  filter: invert(100%);
+}
+
+.adminArea .content-page.recipes div:last-child {
+  margin-bottom: 50px;
+}
+
+.adminArea .content-block {
+  grid-template-columns: 1fr 1fr;
+}
+
+.adminArea .content-block .card {
+  display: flex;
+}
+
+.adminArea .content-block .card img {
+  border-radius: 8.57px;
+  height: 80px;
+  margin-right: 20px;
+  width: 172px;
+}
+
+.adminArea .details > div:first-child,
+.adminArea .page-show-recipe > div:first-child,
+.adminArea .page-admin-recipe > div:first-child {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.adminArea .page-show-recipe > div + div a {
+  display: none;
+}
+
+.adminArea .details .item {
+  position: relative;
+}
+
+.adminArea .card button,
+.adminArea .details .item button,
+.adminArea .page-show-recipe button,
+.adminArea .content-block .card div a {
+  background-color: transparent;
+  color: var(--color-link);
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.adminArea .content-block .card div a,
+.adminArea .details .item input {
+  margin-top: 10px;
+}
+
+.adminArea .details button,
+.adminArea .page-show-recipe a.button,
+.adminArea .page-admin-recipe a.button {
+  background-color: var(--color-link);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 9px 20px;
+  text-decoration: none;
+}
+
+.adminArea #form-delete.details {
+  position: absolute;
+  right: 148px;
+}
+
+.adminArea #form-delete.details button {
+  background-color: #dc4747;
+}
+
+.adminArea .details .item button {
+  margin-top: 15px;
+}
+
+.adminArea .details .item div {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  margin: 30px 0 10px;
+}
+
+.adminArea .details .item div + div {
+  margin: 0;
+}
+
+.adminArea .details .item input,
+.adminArea .details .item textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--fontColor-black);
+  font-family: var(--fontFace-roboto);
+  font-size: 18px;
+  height: 49px;
+  line-height: 28px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.adminArea .details .item textarea {
+  height: 227px;
+  padding: 15px;
+}
+
+.adminArea .details .item textarea:first-child {
+  display: none;
+}
+
+.adminArea .details .item input::placeholder {
+  color: var(--fontColor-gray9);
 }

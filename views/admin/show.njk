@@ -1,0 +1,11 @@
+{% extends 'layoutAdmin.njk' %}
+
+{% block content %}
+  <div class="page-show-recipe">
+    <div>
+      <h2>Receita: {{ recipe.title }}</h2>
+      <a href="/admin/recipes/{{ recipe.id }}/edit" class="button">Editar receita</a>
+    </div>
+    {% include 'recipe-block.njk' %}
+  </div>
+{% endblock %}
