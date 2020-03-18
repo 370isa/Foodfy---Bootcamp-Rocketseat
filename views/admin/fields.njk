@@ -1,0 +1,91 @@
+<div class="item">
+  <div>Imagem da receita</div>
+  <input
+    type="url"
+    name="recipes_url"
+    value="{{ recipes.recipes_url }}"
+    placeholder="http://"
+  >
+</div>
+
+<div class="item">
+  <div>Nome da Receita</div>
+  <input
+    type="text"
+    name="title"
+    value="{{ recipes.title }}"
+    placeholder="Nome da receita"
+  >
+</div>
+
+<div class="item">
+  <div>Nome do Chefe</div>
+  <input
+    type="text"
+    name="author"
+    value="{{ recipes.author }}"
+    placeholder="Nome do chefe da receita"
+  >
+</div>
+
+<div id="ingredients" class="item">
+  <div>Ingredientes</div>
+  <div class="ingredient">
+    {% if recipes.ingredients %}
+      {% for item in recipes.ingredients %}
+        <input
+          type="text"
+          name="ingredients[]"
+          value="{{ item }}"
+          placeholder="Ingrediente"
+        >
+      {% endfor %}
+    {% else %}
+      <input
+        type="text"
+        name="ingredients[]"
+        value="{{ recipes.ingredients }}"
+        placeholder="Ingrediente"
+      >
+    {% endif %}
+  </div>
+  <button type="button" class="add-ingredient" onclick="addInput('ingredient')">
+    Adicionar novo ingrediente
+  </button>
+</div>
+
+<div id="preparations" class="item">
+  <div>Modo de preparo</div>
+  <div class="preparation">
+    {% if recipes.preparation %}
+      {% for item in recipes.preparation %}
+        <input
+          type="text"
+          name="preparation[]"
+          value="{{ item }}"
+          placeholder="Passo a passo da receita"
+        >
+      {% endfor %}
+    {% else %}
+      <input
+        type="text"
+        name="preparation[]"
+        value="{{ recipes.preparation }}"
+        placeholder="Passo a passo da receita"
+      >
+    {% endif %}
+  </div>
+  <button type="button" class="add-preparation" onclick="addInput('preparation')">
+    Adicionar novo passo
+  </button>
+</div>
+<div class="item">
+  <div>Informações adicionais</div>
+  <textarea
+    id="information"
+    name="information"
+    placeholder="Caso tenha alguma informação para acrescentar..."
+    rows="10"
+    cols="30"
+  >{{ recipes.information }}</textarea>
+</div>
