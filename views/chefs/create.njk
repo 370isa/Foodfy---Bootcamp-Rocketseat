@@ -1,19 +1,18 @@
 {% extends 'admin/layoutAdmin.njk' %}
 
 {% block head_content %}
-  <title>FOODFY - Cadastro de receita</title>
+  <title>FOODFY - Cadastro de chef</title>
 {% endblock %}
 
 {% block content %}
-  <form action="/admin/recipes" method="POST">
+  <form action="/admin/chefs" method="POST">
     <section class="details">
       <div>
         <h2>Criando chef</h2>
         <button type="submit">Salvar chef</button>
       </div>
 
-      {% include 'admin/fields.njk' %}
-
+      {% include 'chefs/fields.njk' %}
     </section>
   </form>
 {% endblock %}

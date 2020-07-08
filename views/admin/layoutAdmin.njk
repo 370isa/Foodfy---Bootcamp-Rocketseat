@@ -1,0 +1,15 @@
+{% extends 'layout.njk' %}
+
+{% block head_content %}
+  <title>FOODFY Admin</title>
+{% endblock %}
+
+{% set classBody = "class='adminArea'" %}
+
+{% block menu_header %}
+  <a href="/admin/">
+    <img src="/images/logo.png" alt="FOODFY">
+  </a>
+  <a href="/admin/recipes">Receitas</a>
+  <a href="/admin/chefs">Chefs</a>
+{% endblock %}

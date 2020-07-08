@@ -97,8 +97,39 @@ header a.active {
   font-weight: bold;
 }
 
-header a:last-child {
+header a {
   margin-left: 30px;
+}
+
+header a:first-child,
+header a:nth-child(2) {
+  margin-left: 0;
+}
+
+header form {
+  right: 0;
+  position: absolute;
+}
+
+header form input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--fontColor-black);
+  font-family: var(--fontFace-roboto);
+  font-size: 14px;
+  height: 37px;
+  line-height: 26px;
+  padding: 0 15px;
+  width: 246px;
+}
+
+header form button {
+  background-color: var(--color-link);
+  border-radius: 4px;
+  color: white;
+  height: 37px;
+  padding: 9px 20px;
 }
 
 /* === BANNER TOP === */
@@ -311,6 +342,11 @@ footer {
 }
 
 .adminArea header a {
+  color: white;
+  text-transform: uppercase;
+}
+
+.adminArea header a:first-child {
   margin-left: 0;
 }
 
@@ -339,7 +375,7 @@ footer {
 
 .adminArea .details > div:first-child,
 .adminArea .page-show-recipe > div:first-child,
-.adminArea .page-admin-recipe > div:first-child {
+.adminArea .admin-page-list > div:first-child {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
@@ -375,7 +411,7 @@ footer {
 
 .adminArea .details button,
 .adminArea .page-show-recipe a.button,
-.adminArea .page-admin-recipe a.button {
+.adminArea .admin-page-list a.button {
   background-color: var(--color-link);
   border-radius: 4px;
   color: white;
@@ -388,6 +424,10 @@ footer {
 .adminArea #form-delete.details {
   position: absolute;
   right: 148px;
+}
+
+.adminArea #form-delete.details.chef {
+  right: 130px;
 }
 
 .adminArea #form-delete.details button {
@@ -410,6 +450,7 @@ footer {
 }
 
 .adminArea .details .item input,
+.adminArea .details .item select,
 .adminArea .details .item textarea {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -434,4 +475,35 @@ footer {
 
 .adminArea .details .item input::placeholder {
   color: var(--fontColor-gray9);
+}
+
+/* === CHEFS === */
+.content-block.list-chefs {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.content-block.list-chefs .card {
+  align-items: center;
+  display: flex;
+}
+
+.content-block.list-chefs .card img {
+  border-radius: 50%;
+  height: 64px;
+  margin-right: 20px;
+  width: 64px;
+}
+
+.content-block.list-chefs .card h4 {
+  font-weight: normal;
+}
+
+.adminArea .content-page.chefs .image-chefs {
+  text-align: center;
+}
+
+.adminArea .content-page.chefs .image-chefs img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
 }
