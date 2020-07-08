@@ -1,27 +1,28 @@
 {% extends 'admin/layoutAdmin.njk' %}
 
 {% block head_content %}
-  <title>FOODFY - Editando receita</title>
+  <title>FOODFY - Edição da chef</title>
 {% endblock %}
 
 {% block content %}
-  <form id="form-delete" class="details" method="POST" action="/admin/recipes?_method=DELETE">
-    <input type="hidden" name="id" value="{{ recipes.id }}">
+  <form id="form-delete" class="details chef" method="POST" action="/admin/chefs?_method=DELETE">
+    <input type="hidden" name="id" value="{{ chefs.id }}">
     <button type="submit">Deletar</button>
   </form>
 
-  <form method="POST" action="/admin/recipes?_method=PUT">
+  <form method="POST" action="/admin/chefs?_method=PUT">
     <section class="details">
       <div>
-        <h2>Editando receita</h2>
-        <button type="submit">Salvar receita</button>
+        <h2>Editando chef</h2>
+        <button type="submit">Salvar chef</button>
       </div>
 
-      {% include 'admin/fields.njk' %}
+      {% include 'chefs/fields.njk' %}
 
-      <input type="hidden" name="id" value="{{ recipes.id }}">
+      <input type="hidden" name="id" value="{{ chefs.id }}">
     </section>
   </form>
+
   <script>
     const formDelete = document.querySelector("#form-delete");
     formDelete.addEventListener("submit", function(event) {

@@ -1,4 +1,15 @@
-{% extends 'layout.njk' %}
+{% extends 'userArea/layoutUserArea.njk' %}
+
+{% block menu_filter %}
+  <form action="/" method="GET">
+    <input
+      type="text"
+      name="filter"
+      placeholder="Buscar uma receita"
+    >
+    <button type="submit">Buscar</button>
+  </form>
+{% endblock %}
 
 {% block top_content %}
   <div class="banner-top">
@@ -18,9 +29,9 @@
     {% for item in recipes %}
       <div id="{{ item.id }}" class="card">
         <a href="/recipes/{{ item.id }}">
-          <img src="{{ item.recipes_url }}" alt="Imagem de {{ item.title }}">
+          <img src="{{ item.image }}" alt="Imagem de {{ item.title }}">
           <h4>{{ item.title }}</h4>
-          <span>por {{ item.author }}</span>
+          <span>por {{ item.chefsname }}</span>
         </a>
       </div>
     {% endfor %}

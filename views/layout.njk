@@ -6,31 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% block head_content %}
       <title>FOODFY</title>
     {% endblock %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
-  <body>
-    <div class="container">
-      <header>
+  <body {{ classBody }}>
+    <header>
+      <div class="container">
         <div class="links">
-          <a href="/">
-            <img src="/images/logo.png" alt="FOODFY">
-          </a>
-          <a href="/about">Sobre</a>
-          <a href="/recipes">Receitas</a>
+          {% block menu_header %}
+            {% block menu_filter %}{% endblock %}
+          {% endblock %}
         </div>
-      </header>
+      </div>
+    </header>
 
+    <div class="container">
       {% block top_content %}{% endblock %}
 
       <section>
         {% block content %}{% endblock %}
       </section>
-
     </div>
-    <footer>Todos direitos reservados, receitas Foodfy.</footer>
+
+    {% block footer %}{% endblock %}
 
     <script src="/script.js"></script>
   </body>

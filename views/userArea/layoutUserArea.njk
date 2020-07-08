@@ -1,0 +1,19 @@
+{% extends 'layout.njk' %}
+
+{% block head_content %}
+  <title>FOODFY</title>
+{% endblock %}
+
+{% block menu_header %}
+  <a href="/">
+    <img src="/images/logo.png" alt="FOODFY">
+  </a>
+  <a href="/about">Sobre</a>
+  <a href="/recipes">Receitas</a>
+  <a href="/chefs">Chefs</a>
+  {% block menu_filter %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+  <footer>Todos direitos reservados, receitas Foodfy.</footer>
+{% endblock %}

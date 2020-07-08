@@ -1,0 +1,15 @@
+{% extends 'userArea/layoutUserArea.njk' %}
+
+{% block content %}
+  <div class="content-block list-chefs">
+    {% for item in chefs %}
+      <div id="{{ item.id }}" class="card">
+        <img src="{{ item.avatar_url }}" alt="Foto de {{ item.name }}">
+        <div>
+          <h4>{{ item.name }}</h4>
+          <span>{{ item.total_recipes }} receita{{ 's' if item.total_recipes > 1 }}</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
